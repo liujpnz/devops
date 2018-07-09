@@ -1,3 +1,6 @@
+#note from
+#https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners
+
 echo "# devops" >> README.md
 git init
 
@@ -14,6 +17,7 @@ git commit -m "This is my first commit!"
 git push -u origin master
 
 
+###########
 #create a new branch and check you in new branch
 git checkout -b newbranch
 
@@ -23,5 +27,17 @@ git branch
 #push a branch to github
 git push origin newbranch
 
+#merge on github
+#in website
+
+#switch branch back to master
+git checkout master
+
+###########
+
+git pull origin master
+
+#see all new commits
+git log
 
 
