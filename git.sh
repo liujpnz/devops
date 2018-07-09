@@ -1,6 +1,8 @@
 #note from
 #https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners
 
+#http://rogerdudler.github.io/git-guide/index.html
+
 echo "# devops" >> README.md
 git init
 
