@@ -1,4 +1,4 @@
-#note from
+ #note from
 #https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners
 
 #http://rogerdudler.github.io/git-guide/index.html
@@ -43,3 +43,6 @@ git pull origin master
 git log
 
 
+#set author info
+git config --global user.name "Jason Liu"
+git config --global user.email "liujpnz@gmail.com"
