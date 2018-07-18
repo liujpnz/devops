@@ -1,4 +1,13 @@
 import pyodbc 
+#https://github.com/mkleehammer/pyodbc/wiki/Getting-started
+
+# Specifying the ODBC driver, server name, database, etc. directly
+#cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER=localhost;DATABASE=testdb;UID=me;PWD=pass')
+
+# Using a DSN, but providing a password as well
+#cnxn = pyodbc.connect('DSN=test;PWD=password')
+
+
 
 cnxn = pyodbc.connect(
     r'DSN=DataCenter;'
@@ -7,7 +16,7 @@ cnxn = pyodbc.connect(
     r'APP=Daily Incremental Backup;'
     )
 	
-	
+# Create a cursor from the connection	
 cursor = cnxn.cursor()
 
 #cursor.execute("SELECT top 10 TxnID ,LinkedTxnSeqNo,LinkedTxnTxnID ,LinkedTxnTxnType ,LinkedTxnTxnDate ,LinkedTxnRefNumber ,LinkedTxnLinkType  ,LinkedTxnAmount   FROM SalesOrderLinkedTxn nosync")
