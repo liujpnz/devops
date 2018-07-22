@@ -12,6 +12,11 @@ git status
 
 git add README.md
 
+#clone
+git clone /path/to/repository
+
+git clone username@host:/path/to/repository
+
 # -m to state some new features or bugs fixed
 git commit -m "This is my first commit!"
 
