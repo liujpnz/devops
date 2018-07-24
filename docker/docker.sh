@@ -50,4 +50,4 @@ bc19ef7aa215        jenkins/jenkins           "/sbin/tini -- /usr/…"   About a
 https://hub.docker.com/r/greyltc/lamp/
 docker run --name lamp -p 443:443 -d greyltc/lamp
 
-docker run -v ~/www:/var/www/james/it/v2 --name lamp -p 80:80 -d greyltc/lamp
+docker run -v /var/www/james/it/v2:/srv/http --name lamp -p 443:443 -d greyltc/lamp
