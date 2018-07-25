@@ -1,6 +1,11 @@
 root@webserver:/etc# groupadd apache
 
-root@webserver:/etc# useradd -d /home/apache -g apache apache
+#root@webserver:/etc# useradd -d /home/apache -g apache apache
+
+adduser apache
+
+root@docker:/etc# usermod -aG sudo apache
+root@docker:/etc# usermod -aG www-data apache
 
 root@webserver:/home# chown apache:apache apache
 
@@ -124,5 +129,35 @@ $ sudo systemctl restart apache2
 $ sudo systemctl reload apache2
 $ sudo systemctl enable apache2
 $ sudo systemctl disable apache2
+
+
+
+#install mysql-server
+sudo apt-get install mysql-server
+
+#
+mysql_secure_installation
+
+
+#install php
+
+apt-get install php
+
+
+sed -i "s/short_open_tag = .*/short_open_tag = On/" /etc/php/7.0/apache2/php.ini 
+<? phpinfo();
+PHP is installed by default with short tags off. Either change your code or change php.ini.
+This sed command will do the trick if you opt to turn short tags on.
+
+
+
+
+#configure sql server drive for php
+https://docs.microsoft.com/en-us/sql/connect/php/installation-tutorial-linux-mac?view=sql-server-2017
+
+
+#apt-get install php-pear php-dev
+
+sudo apt-get install -f php-pear
 
 
