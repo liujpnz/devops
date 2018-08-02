@@ -51,3 +51,13 @@ https://hub.docker.com/r/greyltc/lamp/
 docker run --name lamp -p 443:443 -d greyltc/lamp
 
 docker run -v /var/www/james/it/v2:/srv/http --name lamp -p 443:443 -d greyltc/lamp
+
+
+
+
+#mssql-server-linux
+docker pull microsoft/mssql-server-linux
+docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=abCde@123' -p 1433:1433 -d microsoft/mssql-server-linux
+
+sqlcmd -S localhost -U sa -P abCde@123
+
